@@ -10,7 +10,7 @@ console.log(partsNeeded);
 // 2. Create a variable called 'supplyChanges' whose value is an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11.
 console.log('2. Create supplyChanges:');
-const supplyChanges = [3, 5, -6, 0, 7, 11];
+let supplyChanges = [3, 5, -6, 0, 7, 11];
 console.log(supplyChanges);
 // 3. Create a variable called 'secondItem' and assign it the value of the second
 //    item in the 'supplyChanges' array.
@@ -64,6 +64,22 @@ console.log("Zeroes:", zeroes);
 //    'stretchNegatives', and 'stretchZeroes'. 
 console.log('7. Looping through supplyChanges to populate more arrays with positive, negative, and zero values:');
 
+let stretchPositives = [];
+let stretchNegatives = [];
+let stretchZeros = [];
+
+for (value of supplyChanges) {
+  if (value > 0) {
+    stretchPositives.push(value);
+  } else if (value < 0) {
+    stretchNegatives.push(value);
+  } else {
+    stretchZeros.push(value);
+  }
+}
+console.log("Positives:", stretchPositives);
+console.log("Negatives:", stretchNegatives);
+console.log("Zeroes:", stretchZeros);
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
